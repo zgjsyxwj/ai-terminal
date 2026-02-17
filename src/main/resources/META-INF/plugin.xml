@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>io.refactoring.ai-terminal</id>
+    <name>AI Terminal - Open in Claude</name>
+    <vendor>Sid Wu</vendor>
+
+    <description><![CDATA[
+        Open system terminal and launch Claude Code CLI from IntelliJ Project view.<br>
+        Right-click any file or folder in the Project view to open Claude Code in that directory.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="OpenInClaude" displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <action id="io.refactoring.aiterminal.OpenInClaude"
+                class="io.refactoring.aiterminal.OpenInClaudeAction"
+                text="Open in Claude"
+                description="Open system terminal and run claude in the selected directory"
+                icon="io.refactoring.aiterminal.ClaudeIcons.Action">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </action>
+
+        <action id="io.refactoring.aiterminal.OpenInClaudeToolbar"
+                class="io.refactoring.aiterminal.OpenInClaudeToolbarAction"
+                text="Open in Claude"
+                description="Open system terminal and run claude in the project root directory"
+                icon="io.refactoring.aiterminal.ClaudeIcons.Action">
+            <add-to-group group-id="MainToolbarRight" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
