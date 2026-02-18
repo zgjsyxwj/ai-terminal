@@ -28,6 +28,9 @@
                 text="Open in Claude"
                 description="Open system terminal and run claude in the project root directory"
                 icon="io.refactoring.aiterminal.ClaudeIcons.Action">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <add-to-group group-id="NavBarToolBar" anchor="last"/>
+            <add-to-group group-id="RightToolbarSideGroup" anchor="first"/>
             <add-to-group group-id="MainToolbarRight" anchor="last"/>
         </action>
     </actions>
